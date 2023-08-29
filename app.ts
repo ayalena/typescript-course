@@ -1,10 +1,11 @@
-// again: this is not good practice, but is how a specific object is represented in TS
-const person: {
-  name: string;
-  age: number;
-} = {
+const person = {
   name: "Fenn",
   age: 10,
+  hobbies: ["Draw", "Acro"],
 };
 
 console.log(person.name);
+
+for (const hobby of person.hobbies) {
+  console.log(hobby.toUpperCase());
+}
