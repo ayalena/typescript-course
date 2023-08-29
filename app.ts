@@ -1,16 +1,10 @@
-function add(n1: number, n2: number, showResult: boolean, phrase: string) {
-  const result = n1 + n2;
-  if (showResult) {
-    console.log(phrase + result);
-  } else {
-    return n1 + n2;
-  }
-}
+// again: this is not good practice, but is how a specific object is represented in TS
+const person: {
+  name: string;
+  age: number;
+} = {
+  name: "Fenn",
+  age: 10,
+};
 
-const number1 = 5;
-const number2 = 2.8;
-const printResult = true;
-const resultPhrase = "Result is: ";
-// this is just to show how types are assigned. Normally we don't explicitly assign types like we just did here.
-
-const result = add(number1, number2, printResult, resultPhrase);
+console.log(person.name);
