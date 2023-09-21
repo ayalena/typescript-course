@@ -11,6 +11,5 @@ const number1 = 5;
 const number2 = 2.8;
 const printResult = true;
 const resultPhrase = "Result is: ";
-// this is just to show how types are assigned. Normally we don't explicitly assign types like we just did here.
 
 const result = add(number1, number2, printResult, resultPhrase);
