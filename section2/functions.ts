@@ -1,14 +1,14 @@
-function add(n1: number, n2: number): number {
+function add2(n1: number, n2: number): number {
   return n1 + n2;
 }
 
-function printResult(num: number) {
+function printResult2(num: number) {
   console.log("Result: " + num);
 }
 
-printResult(add(5, 12));
+printResult2(add2(5, 12));
 
-console.log(printResult(add(5, 12)));
+console.log(printResult2(add2(5, 12)));
 
 let someValue: undefined;
 
@@ -18,7 +18,7 @@ function printUndefinedResult(num: number): undefined {
 }
 
 let combineValues: (a: number, b: number) => number;
-combineValues = add;
+combineValues = add2;
 console.log(combineValues(9, 9));
 
 function addAndHandle(
