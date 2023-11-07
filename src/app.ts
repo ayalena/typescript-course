@@ -17,9 +17,38 @@ class Department {
   }
 }
 
-const accounting = new Department("D1", "Accounting");
+// without shorthand
+class ITDepartment extends Department {
+  public admins: string[];
+  constructor(id: string, admins: string[]) {
+    super(id, "IT");
+    this.admins = admins;
+  }
+}
+
+//with shorthand
+class AccountingDepartment extends Department {
+  constructor(id: string, private reports: string[]) {
+    super(id, "Accounting");
+  }
+  addReport(text: string) {
+    this.reports.push(text);
+  }
+  printReports() {
+    console.log(this.reports);
+  }
+}
+
+const it = new ITDepartment("D2", ["Elsie"]);
+
+const accounting = new AccountingDepartment("D1", []);
 
 accounting.addEmployee("Fenn");
 
 accounting.describe();
 accounting.printEmployeeInfo();
+
+it.describe();
+
+accounting.addReport("Something went wrong");
+accounting.printReports();
